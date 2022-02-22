@@ -1,0 +1,87 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&family=Montserrat:wght@300&family=Open+Sans&display=swap");
+/* font-family: 'Open Sans', sans-serif;
+ */
+/* varialbes */
+:root {
+  /* colors */
+  --bc: #000;
+  --button1st: #e2e2e2;
+  --button2nd: #d74f41;
+}
+
+/* reset */
+body,
+h2,
+h3,
+p,
+button,
+/* input, */
+a,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style-type: none;
+  border: none;
+}
+/* base styles */
+* {
+  box-sizing: border-box;
+  /* outline: 2px dotted red; */
+}
+
+/* fonts */
+body {
+  font-size: calc(14px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
+}
+
+/* mobil styles */
+/* header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: solid 1px var(--button1st);
+}
+button,
+input,
+.button {
+  border-radius: 1vw 1vw 1vw 1vw;
+  padding: 0.5rem 0.7rem;
+}
+/* top section */
+.top {
+  max-width: 50vw;
+  margin: 1rem auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 1rem;
+}
+img {
+  max-width: 100%;
+}
+.top article:first-of-type {
+  text-align: center;
+}
+#icons,
+.serves {
+  display: flex;
+  justify-content: space-between;
+  place-items: center;
+}
+.serves p:first-of-type {
+  /* selects the first p inside the .top  */
+  margin-left: auto;
+  background-color: var(--button1st);
+}
+/* small tablet styles */
+@media screen and (min-width: 620px) {
+}
+/* large tablets and laptop styles */
+@media screen and (min-width: 960px) {
+}
+
+/* destop styles */
+@media screen and (min-width: 1200px) {
+}
