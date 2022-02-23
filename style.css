@@ -1,12 +1,17 @@
-@import url("https://fonts.googleapis.com/css2?family=Lato&family=Montserrat:wght@300&family=Open+Sans&display=swap");
-/* font-family: 'Open Sans', sans-serif;
- */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
 /* varialbes */
 :root {
   /* colors */
   --bc: #000;
   --button1st: #e2e2e2;
   --button2nd: #d74f41;
+
+  --font-headers: bolder "Open Sans", sans-serif;
+
+  /* Setup custom properties (CSS variables) for colors and spacing/padding/margin */
+  --large: clamp(2rem, 5vw, 5rem);
+  --medium: clamp(1.5rem, 3vw, 3rem);
+  --small: clam(1rem, 1.25vw, 1.25rem);
 }
 
 /* reset */
@@ -32,8 +37,9 @@ li {
 }
 
 /* fonts */
-body {
-  font-size: calc(14px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
+
+html {
+  font-size: 100%;
 }
 
 /* mobil styles */
@@ -43,6 +49,16 @@ header {
   justify-content: space-between;
   align-items: center;
   border-bottom: solid 1px var(--button1st);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-headers);
+}
+span {
+  font-weight: 100;
 }
 button,
 input,
@@ -63,6 +79,12 @@ img {
 }
 .top article:first-of-type {
   text-align: center;
+}
+.top article:first-of-type p:first-of-type,
+#icons li,
+button,
+.button {
+  font-size: 0.8rem;
 }
 #icons,
 .serves {
